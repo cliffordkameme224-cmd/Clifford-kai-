@@ -2,155 +2,455 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clifford Kai | Graphic Design & AI Services</title>
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Clifford Kai - Personal blog about AI, technology, content creation, fashion and digital skills.">
+
+  <meta name="author" content="Clifford Kai">
+
+  <title>Clifford Kai | My Personal Blog</title>
 
   <style>
+    /* =========================
+       GENERAL STYLES
+    ========================== */
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
+      font-family: Arial, Helvetica, sans-serif;
       background: #f5f7fb;
       color: #222;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
     header {
       background: #111827;
       color: white;
-      padding: 20px;
-      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
     }
 
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 5px;
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    header p {
-      color: #d1d5db;
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #22c55e;
     }
 
     nav {
-      background: #1f2937;
-      padding: 12px;
-      text-align: center;
+      display: flex;
+      gap: 25px;
     }
 
     nav a {
       color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
+      font-size: 0.95rem;
+      transition: 0.3s;
     }
+
+    nav a:hover {
+      color: #22c55e;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
 
     .hero {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(135deg, #111827, #1e293b);
       color: white;
-      padding: 70px 20px;
-      text-align: center;
+      padding: 70px 0;
     }
 
-    .hero h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
+    .hero-content {
+      max-width: 760px;
     }
 
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 17px;
-    }
-
-    .button {
+    .tag {
       display: inline-block;
-      margin-top: 25px;
-      padding: 13px 25px;
-      background: white;
-      color: #2563eb;
-      text-decoration: none;
+      background: rgba(34,197,94,0.15);
+      color: #4ade80;
+      padding: 8px 15px;
       border-radius: 30px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
       font-weight: bold;
     }
 
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
     }
 
-    .title {
-      text-align: center;
+    .hero h1 span {
+      color: #22c55e;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #d1d5db;
+      max-width: 680px;
       margin-bottom: 30px;
     }
 
-    .title h2 {
-      font-size: 28px;
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    .services {
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #062e16;
+    }
+
+    .btn-primary:hover {
+      background: #4ade80;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #64748b;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border-color: #22c55e;
+      color: #4ade80;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #64748b;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      color: #4b5563;
+      margin-bottom: 15px;
+    }
+
+    .about-box {
+      background: #f1f5f9;
+      padding: 30px;
+      border-radius: 15px;
+      border-left: 5px solid #22c55e;
+    }
+
+    .about-box h3 {
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       TOPICS
+    ========================== */
+
+    .topics {
+      background: #f5f7fb;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
     .card {
       background: white;
-      padding: 25px;
+      padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      text-align: center;
+      box-shadow: 0 8px 25px rgba(15,23,42,0.07);
+      transition: 0.3s;
     }
 
-    .card .icon {
-      font-size: 40px;
-      margin-bottom: 10px;
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(15,23,42,0.12);
+    }
+
+    .icon {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
     }
 
     .card h3 {
       margin-bottom: 10px;
     }
 
-    .about {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      text-align: center;
+    .card p {
+      color: #64748b;
     }
+
+    /* =========================
+       BLOG
+    ========================== */
+
+    .blog {
+      background: white;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .post {
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      overflow: hidden;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .post:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-image {
+      height: 170px;
+      background: linear-gradient(135deg, #1e293b, #22c55e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+    }
+
+    .post-content {
+      padding: 22px;
+    }
+
+    .post-content small {
+      color: #22a653;
+      font-weight: bold;
+    }
+
+    .post-content h3 {
+      margin: 8px 0;
+    }
+
+    .post-content p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills {
+      background: #f5f7fb;
+    }
+
+    .skills-list {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    .progress {
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: #22c55e;
+      border-radius: 20px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
 
     .contact {
-      text-align: center;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 20px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-
-    footer {
       background: #111827;
       color: white;
       text-align: center;
-      padding: 25px;
-      margin-top: 30px;
     }
 
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 30px;
+    .contact h2 {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social {
+      border: 1px solid #475569;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .social:hover {
+      border-color: #22c55e;
+      color: #4ade80;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 800px) {
+
+      nav {
+        display: none;
       }
 
-      nav a {
-        margin: 0 5px;
+      .hero {
+        min-height: 80vh;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
       }
     }
   </style>
@@ -158,97 +458,492 @@
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
-    <h1>Clifford Kai</h1>
-    <p>Graphic Design & AI Services</p>
+    <div class="container navbar">
+
+      <a href="#home" class="logo">
+        Clifford<span>Kai</span>
+      </a>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+
+  <!-- =========================
+       HERO
+  ========================== -->
 
   <section class="hero" id="home">
-    <h2>Creative Designs. Powerful AI.</h2>
-    <p>
-      Welcome to Clifford Kai — professional graphic design and AI-powered
-      creative services for individuals, businesses and content creators.
-    </p>
-    <a class="button" href="#contact">Get Started</a>
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="tag">
+          🇲🇼 AI & Tech Creator
+        </div>
+
+        <h1>
+          Welcome to<br>
+          <span>Clifford Kai</span>
+        </h1>
+
+        <p>
+          Exploring artificial intelligence, technology, digital skills,
+          content creation, fashion and branding — while sharing what
+          I learn along the way.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#about" class="btn btn-primary">
+            Explore My Blog
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Connect With Me
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </section>
 
-  <section id="services">
-    <div class="title">
-      <h2>My Services</h2>
-      <p>Creative solutions for your digital needs.</p>
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About Me</h2>
+        <p>Get to know Clifford Kai</p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <h3>Hello, I'm Clifford Kai 👋</h3>
+
+          <p>
+            Welcome to my personal blog. I'm passionate about technology,
+            artificial intelligence, creativity and digital skills.
+          </p>
+
+          <p>
+            I use this blog to share ideas, lessons, experiences and
+            useful resources that can help people understand and use
+            technology in everyday life.
+          </p>
+
+          <p>
+            My goal is to keep learning, creating and helping others
+            discover new opportunities in the digital world.
+          </p>
+
+        </div>
+
+        <div class="about-box">
+
+          <h3>What I Believe</h3>
+
+          <p>
+            Technology should not only be understood by experts.
+            With curiosity, practice and the right resources,
+            anyone can learn how to use digital tools to create
+            opportunities.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="services">
-
-      <div class="card">
-        <div class="icon">🎨</div>
-        <h3>Graphic Design</h3>
-        <p>
-          Posters, flyers, banners, social media graphics and promotional designs.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3>AI Image Creation</h3>
-        <p>
-          Creative AI-generated images, concepts, portraits and promotional visuals.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📱</div>
-        <h3>Social Media Design</h3>
-        <p>
-          Eye-catching content designed for Facebook, Instagram, TikTok and other platforms.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">✨</div>
-        <h3>Photo Enhancement</h3>
-        <p>
-          Improve your photos with high-quality enhancement and creative editing.
-        </p>
-      </div>
-
-    </div>
   </section>
 
-  <section id="about">
-    <div class="title">
-      <h2>About Clifford Kai</h2>
+
+  <!-- =========================
+       TOPICS
+  ========================== -->
+
+  <section class="topics" id="topics">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>What I Talk About</h2>
+        <p>My main areas of interest</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>Artificial Intelligence</h3>
+
+          <p>
+            Exploring AI tools, practical uses of AI and how
+            artificial intelligence can help people learn,
+            create and work smarter.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">💻</div>
+
+          <h3>Technology</h3>
+
+          <p>
+            Sharing useful technology tips, digital tools,
+            websites and ideas for becoming more confident
+            in the digital world.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🎨</div>
+
+          <h3>Content Creation</h3>
+
+          <p>
+            Ideas and lessons about creating social media
+            content, using creative tools and building an
+            online presence.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">👕</div>
+
+          <h3>Fashion</h3>
+
+          <p>
+            Exploring fashion, personal style and creative
+            ideas connected to modern digital culture.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🏷️</div>
+
+          <h3>Branding</h3>
+
+          <p>
+            Learning about personal branding, business
+            branding and how creators can build recognizable
+            identities online.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">📱</div>
+
+          <h3>Digital Skills</h3>
+
+          <p>
+            Practical digital skills that can help people
+            learn, communicate, create and explore opportunities
+            online.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="about">
+  </section>
+
+
+  <!-- =========================
+       BLOG
+  ========================== -->
+
+  <section class="blog" id="blog">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Latest Ideas</h2>
+
+        <p>
+          Things I'm learning, exploring and sharing
+        </p>
+
+      </div>
+
+
+      <div class="blog-grid">
+
+
+        <article class="post">
+
+          <div class="post-image">
+            🤖
+          </div>
+
+          <div class="post-content">
+
+            <small>AI & TECHNOLOGY</small>
+
+            <h3>
+              How AI Is Changing Everyday Life
+            </h3>
+
+            <p>
+              Artificial intelligence is becoming part of
+              everyday tools. Here I explore some practical
+              ways people can use AI.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="post">
+
+          <div class="post-image">
+            📱
+          </div>
+
+          <div class="post-content">
+
+            <small>DIGITAL SKILLS</small>
+
+            <h3>
+              Learning Digital Skills
+            </h3>
+
+            <p>
+              Digital skills can open new opportunities.
+              Follow my journey as I continue learning and
+              experimenting with new tools.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="post">
+
+          <div class="post-image">
+            🎨
+          </div>
+
+          <div class="post-content">
+
+            <small>CREATIVITY</small>
+
+            <h3>
+              Creating Content With Technology
+            </h3>
+
+            <p>
+              Creativity and technology can work together.
+              I'm exploring different ways creators can
+              turn ideas into content.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SKILLS
+  ========================== -->
+
+  <section class="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>My Learning Journey</h2>
+
+        <p>
+          Areas I'm developing through practice
+        </p>
+
+      </div>
+
+
+      <div class="skills-list">
+
+        <div class="skill">
+
+          <div class="skill-header">
+            <span>AI & Technology</span>
+            <span>85%</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar" style="width:85%;"></div>
+          </div>
+
+        </div>
+
+
+        <div class="skill">
+
+          <div class="skill-header">
+            <span>Content Creation</span>
+            <span>80%</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar" style="width:80%;"></div>
+          </div>
+
+        </div>
+
+
+        <div class="skill">
+
+          <div class="skill-header">
+            <span>Digital Branding</span>
+            <span>75%</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar" style="width:75%;"></div>
+          </div>
+
+        </div>
+
+
+        <div class="skill">
+
+          <div class="skill-header">
+            <span>Web Development</span>
+            <span>65%</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar" style="width:65%;"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <h2>Let's Connect 🤝</h2>
+
       <p>
-        I am Clifford Kai, a creative designer passionate about graphic design,
-        AI creativity and digital content. My goal is to help people and
-        businesses turn ideas into attractive visual content.
+        I'm always interested in connecting with people who
+        love technology, creativity, business and learning.
       </p>
+
+      <div class="socials">
+
+        <a
+          href="https://www.facebook.com/"
+          class="social"
+          target="_blank">
+          Facebook
+        </a>
+
+        <a
+          href="https://www.instagram.com/"
+          class="social"
+          target="_blank">
+          Instagram
+        </a>
+
+        <a
+          href="https://www.linkedin.com/"
+          class="social"
+          target="_blank">
+          LinkedIn
+        </a>
+
+        <a
+          href="mailto:your@email.com"
+          class="social">
+          Email Me
+        </a>
+
+      </div>
+
     </div>
+
   </section>
 
-  <section id="contact" class="contact">
-    <div class="title">
-      <h2>Let's Work Together</h2>
-      <p>Have a design project or AI image idea?</p>
-    </div>
 
-    <a href="https://wa.me/265XXXXXXXXX">💬 WhatsApp Me</a>
-    <a href="mailto:your@email.com">📧 Email Me</a>
-  </section>
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
-    <p>© 2026 Clifford Kai. All Rights Reserved.</p>
-    <p>Graphic Design • AI Services • Creative Content</p>
+
+    <p>
+      © 2026 <strong>Clifford Kai</strong>.
+      All rights reserved.
+    </p>
+
+    <p>
+      Built with HTML & CSS 🇲🇼
+    </p>
+
   </footer>
 
 </body>
