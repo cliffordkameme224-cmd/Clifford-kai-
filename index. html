@@ -834,7 +834,102 @@
 
           <div class="skill-header">
             <span>Content Creation</span>
-            <span>80%</span>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kai Tech</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background: linear-gradient(135deg, #050505, #0b3d91, #6a0dad);
+        }
+
+        .container {
+            padding: 50px 20px;
+        }
+
+        .logo {
+            width: 280px;
+            max-width: 90%;
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(255,255,255,0.4);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #00e5ff;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .contact {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+        }
+
+        a {
+            color: #00e5ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img
+            class="logo"
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+            alt="Technology">
+
+        <h1>🚀 KAI TECH</h1>
+
+        <h2>AI • Graphics Design • Technology</h2>
+
+        <p>
+            Welcome to Kai Tech!
+        </p>
+
+        <p>
+            We create innovative AI solutions, graphics designs
+            and digital technology experiences.
+        </p>
+
+        <div class="contact">
+            <h2>Contact Kai Tech</h2>
+
+            <p>Facebook: <strong>Cliffordkai</strong></p>
+
+            <p>
+                Email:
+                <a href="mailto:cliffordkameme6@gmail.com">
+                    cliffordkameme6@gmail.com
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>         <span>80%</span>
           </div>
 
           <div class="progress">
